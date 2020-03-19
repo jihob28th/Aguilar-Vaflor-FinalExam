@@ -54,6 +54,6 @@ if($login_button == true){
 				}
 			?>
 			</div>
-	    <div class="footer"> By: Carl Aguilar & Lance Vaflor BSIT-2A</div>
+	    
     </body>
 </html>
