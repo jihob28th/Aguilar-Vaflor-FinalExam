@@ -17,7 +17,7 @@ if($login_button == true){
         <div id="navigation_body">                                  
             <div class="navbar">
                 <ul>
-                    <li><a href="home.php?page=#live"> Noew Showing </a></li>
+                    <li><a href="home.php?page=#live"> Now Showing </a></li>
                     <li><a href="home.php?page=#coming_soon"> Coming Soon </a></li>
                     <li><a href="home.php?page=movies"> Search Movies </a></li>
                 </ul>
