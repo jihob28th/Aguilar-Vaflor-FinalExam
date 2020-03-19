@@ -15,10 +15,10 @@ if($login_button == true){
     <div class="navhead">
             <div class="navigation">
                         <ul> 
-                        <li> <a href="index.php?loadnav=home"> <b>HOME </b></a> </li>
-                        <li> <a href="index.php?loadnav=list"> SHOW PRODUCT</a> </li>
-                        <li> <a href="index.php?loadnav=categories"> CATEGORIES</a> </li>
-                        <li> <a href="index.php?loadnav=create"> CREATE  </a> </li>
+                        <li> <a href="index.php?page=home"> <b>HOME </b></a> </li>
+                        <li> <a href="index.php?page=list"> SHOW PRODUCT</a> </li>
+                        <li> <a href="index.php?page=categories"> CATEGORIES</a> </li>
+                        <li> <a href="index.php?page=create"> CREATE  </a> </li>
                         </ul>
                         </div>
                     </div>
