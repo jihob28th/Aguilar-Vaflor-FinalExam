@@ -11,20 +11,36 @@ if($login_button == true){
       <title>  Final Exam </title>
       <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-    <body style="text-align: center;"> 
-	  	<div style="margin: 0 auto;">
+    <body> 
+    <div class="navhead">
+            <div class="navigation">
+                        <ul> 
+                        <li> <a href="index.php?loadnav=home"> <b>HOME </b></a> </li>
+                        <li> <a href="index.php?loadnav=list"> SHOW PRODUCT</a> </li>
+                        <li> <a href="index.php?loadnav=categories"> CATEGORIES</a> </li>
+                        <li> <a href="index.php?loadnav=create"> CREATE  </a> </li>
+                        </ul>
+                        </div>
+                    </div>
+	  	<div class="content">
 			<?php
 			if($login_button == '')
 				{
 				switch($page){
-				case 'home':
-				require_once('home.php');
+				case 'list':
+			        require_once 'show.php';
+		                break;
+				case 'categories':
+				require_once 'categories.php';
 				break;
-				case 'login':
-				require_once('login.php');
+				case 'create':
+				require_once 'form_create.php';
+				break;
+				case 'profile':
+				require_once 'pro_profile.php';
 				break;
 				default:
-				require_once('home.php');
+				require_once 'home.php';
 				break;
 					}
 				}else{
@@ -41,15 +57,33 @@ if($login_button == true){
 				echo $facebook_login_url;
 				}else{
 				switch($page){
-					case 'home':
-					require_once('home.php');
-					break;
-					case 'login':
-					require_once('login.php');
-					break;
-					default:
-					require_once('home.php');
-					break;
+				  case 'readprod':
+				  require_once 'show.php';
+				  break;
+				  case 'readcat':
+				  require_once 'show_categories.php';
+				  break;
+				  case 'pro_update':
+				  require_once 'pro_update.php';
+				  break;
+				  case 'pro_create':
+				  require_once 'pro_create.php';
+				  break;
+				  case 'create':
+				  require_once 'form_create.php';
+				  break;
+				  case 'update':
+				  require_once 'form_create.php';
+				  break;
+				   case 'delete':
+				  require_once 'pro_delete.php';
+				  break;
+				  case 'details':
+				  require_once 'product_details.php';
+				  break;
+				  default: 
+				  require_once('show.php');
+                                  break;
 					}
 				}
 			?>
