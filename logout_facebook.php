@@ -1,6 +1,6 @@
 <?php
 
-include('facebook_config/config_fb.php');
+include('facebook/config2.php');
 
 $google_client->revokeToken();
 session_destroy();
