@@ -14,30 +14,37 @@ if($login_button == true){
 	</head>
     <body>
 	    <p style="color: white;"> Logged in as <?php echo $_SESSION['user_first_name'] ?> <?php echo $_SESSION['user_last_name'] ?> </p>
-        <div id="navigation_body">                                  
-            <div class="navbar">
-                <ul>
-                    <li><a href="home.php?page=#live"> Now Showing </a></li>
-                    <li><a href="home.php?page=#coming_soon"> Coming Soon </a></li>
-                    <li><a href="home.php?page=movies"> Search Movies </a></li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <?php
-                switch($load){
-                    case 'movies':
-                        require_once('movie_list.php');
-                    break;
-                    case 'show-movie':
-                        require_once('movie_profile.php');
-                    break;
-                    default:
-                        require_once('movie_list.php');
-                    break;
-                }
-            ?>
-        </div>
+        <div class="navhead">
+            <div class="navigation">
+                        <ul> 
+                        <li> <a href="index.php?loadnav=home"> <b>HOME </b></a> </li>
+                        <li> <a href="index.php?loadnav=list"> SHOW PRODUCT</a> </li>
+                        <li> <a href="index.php?loadnav=categories"> CATEGORIES</a> </li>
+                        <li> <a href="index.php?loadnav=create"> CREATE  </a> </li>
+                        </ul>
+                        </div>
+                    </div>
+               
+                        <?php 
+                        switch($loadnav){
+                            case 'list':
+			    require_once 'show.php';
+		            break;
+                            case 'categories':
+                            require_once 'categories.php';
+                            break;
+                            case 'create':
+                            require_once 'form_create.php';
+                            break;
+                            case 'profile':
+                            require_once 'pro_profile.php';
+                            break;
+                            default:
+                            require_once 'home.php';
+                            break;
+                        }
+                        ?>
+        <div class="footer"> By: Carl Aguilar & Lance Vaflor BSIT-2A</div>
     </body>
     <a href="google_logout.php" onClick="location.href='facebook_logout.php'">Logout</a>
 </html>
