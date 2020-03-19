@@ -1,6 +1,9 @@
 <?php
+
+//google file to read data components from User and create sessions
+
 include('config.php');
-//google  credits: john paul maja :D <3 
+
 $login_button = '';
 
 if(isset($_GET["code"])){
@@ -25,10 +28,10 @@ if(isset($_GET["code"])){
   if(!empty($data['picture'])){
    $_SESSION['user_image'] = $data['picture'];
   }
-  header('location:index.php');
  }
 }
 if(!isset($_SESSION['access_token'])){
- $login_button = '<br><a href="'.$google_client->createAuthUrl().'"><img style="" src="images/google.png" /></a>';
+//assign my custom google button
+ $login_button = '<br><a href="'.$google_client->createAuthUrl().'" class="btn-google m-b-20"><img src="images/icons/icon-google.png" alt="GOOGLE">Log in with Google</a>';
 }
 ?>
