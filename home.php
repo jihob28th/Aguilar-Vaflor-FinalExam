@@ -46,5 +46,5 @@ if($login_button == true){
                         ?>
         <div class="footer"> By: Carl Aguilar & Lance Vaflor BSIT-2A</div>
     </body>
-    <a href="google_logout.php" onClick="location.href='facebook_logout.php'">Logout</a>
+    <a href="logout.php" onClick="location.href='logout.php'">Logout</a>
 </html>
