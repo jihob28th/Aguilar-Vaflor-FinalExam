@@ -17,7 +17,7 @@ if($login_button == true){
                         <ul> 
                         <li> <a href="index.php?page=home"> <b>HOME </b></a> </li>
                         <li> <a href="index.php?page=list"> SHOW PRODUCT</a> </li>
-                        <li> <a href="index.php?page=categories"> CATEGORIES</a> </li>
+                        <li> <a href="index.php?page=categories"> CATEGORIES  </a> </li>
                         <li> <a href="index.php?page=create"> CREATE  </a> </li>
                         </ul>
                         </div>
