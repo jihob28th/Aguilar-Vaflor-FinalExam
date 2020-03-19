@@ -15,7 +15,7 @@ $google_client->setClientId('885997956342-c6mucn8cnfdrmjega6ocqtg1metkuqv3.apps.
 $google_client->setClientSecret('5XJcKOxcyWFTbuR5FnanKdO4');
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri('https://aguilar-vaflor-finalexam.herokuapp.com/home.php');
+$google_client->setRedirectUri('https://aguilar-vaflor-finalexam.herokuapp.com/index.php');
 
 //
 $google_client->addScope('email');
