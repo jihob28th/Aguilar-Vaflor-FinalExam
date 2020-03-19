@@ -1,4 +1,4 @@
-<?php //------ credits: john paul maja :D <3 
+<?php 
 
 require_once 'vendor/autoload.php';
 
@@ -10,8 +10,8 @@ if (!session_id())
 // Call Facebook API 
 
 $facebook = new \Facebook\Facebook([
-  'app_id'      => '568286157120937',
-  'app_secret'     => '1e3a40ac75b79a33fbf48f70731d4616',
+  'app_id'      => '201031654519060',
+  'app_secret'     => '90e95ddb9b0138a8ddf7c5e7b5a7c725',
   'default_graph_version'  => 'v2.10'
 ]);
 
