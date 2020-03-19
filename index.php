@@ -2,7 +2,7 @@
 $page = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page']: '';
 include('google/google-confirm.php');
 if($login_button == true){
-	include('facebook_config/facebook_read.php');
+	include('facebook/facebook-confirm.php');
 }
 ?>
 
