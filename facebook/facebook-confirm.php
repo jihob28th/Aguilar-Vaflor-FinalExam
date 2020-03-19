@@ -1,8 +1,7 @@
 <?php
-
-//index.php
+//this file uses fb api to get user info from facebook and declare as sessions
 include('config2.php');
-//------ credits: john paul maja :D <3 
+
 $facebook_output = '';
 
 $facebook_helper = $facebook->getRedirectLoginHelper();
@@ -38,15 +37,14 @@ if(isset($_GET['code'])){
  if(!empty($facebook_user_info['email'])){
   $_SESSION['user_email_address'] = $facebook_user_info['email'];
  }
- header('location:index.php');
 }else{
- // Get login url  credits: john paul maja :D <3 
-    $facebook_permissions = ['email']; // Optional permissions  credits: john paul maja :D <3 
-    $facebook_login_url = $facebook_helper->getLoginUrl('https://maja-etact.herokuapp.com/', $facebook_permissions);  
-// Render Facebook login button  credits: john paul maja :D <3 
-    $facebook_login_url = '<div align="center"><a href="'.$facebook_login_url.'"><img src="images/facebook.png" /></a></div>';
+ // Get login url
+    $facebook_permissions = ['email']; // Optional permissions
+    $facebook_login_url = $facebook_helper->getLoginUrl('https://aguilar-vaflor-finalexam.herokuapp.com/', $facebook_permissions);  
+// Render Facebook login button
+    $facebook_login_url = '<a href="'.$facebook_login_url.'" class="btn-face m-b-20"><i class="fa fa-facebook"></i>Log in with Facebook</a>';
 }
-// credits: john paul maja :D <3 
+
 
 ?>
 
