@@ -1,42 +1,59 @@
 <?php 
-$loadnav = (isset($_GET['loadnav']) && $_GET['loadnav'] != '') ? $_GET['loadnav']: '';
+$page = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page']: '';
+include('google_config/google_read.php');
+if($login_button == true){
+	include('facebook_config/facebook_read.php');
+}
 ?>
+
 <html> 
     <head>
-      <title>  API Exercise 1 </title>
+      <title>  Final Exam </title>
       <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-    <body>
-    <div class="navhead">
-            <div class="navigation">
-                        <ul> 
-                        <li> <a href="index.php?loadnav=home"> <b>HOME </b></a> </li>
-                        <li> <a href="index.php?loadnav=list"> SHOW PRODUCT</a> </li>
-                        <li> <a href="index.php?loadnav=categories"> CATEGORIES</a> </li>
-                        <li> <a href="index.php?loadnav=create"> CREATE  </a> </li>
-                        </ul>
-                        </div>
-                    </div>
-               
-                        <?php 
-                        switch($loadnav){
-                            case 'list':
-			    require_once 'show.php';
-		            break;
-                            case 'categories':
-                            require_once 'categories.php';
-                            break;
-                            case 'create':
-                            require_once 'form_create.php';
-                            break;
-                            case 'profile':
-                            require_once 'pro_profile.php';
-                            break;
-                            default:
-                            require_once 'home.php';
-                            break;
-                        }
-                        ?>
-        <div class="footer"> By: Carl Aguilar & Lance Vaflor BSIT-2A</div>
+    <body style="text-align: center;"> 
+	  	<div style="margin: 0 auto;">
+			<?php
+			if($login_button == '')
+				{
+				switch($page){
+				case 'home':
+				require_once('home.php');
+				break;
+				case 'login':
+				require_once('login.php');
+				break;
+				default:
+				require_once('home.php');
+				break;
+					}
+				}else{
+          		if(isset($facebook_login_url)){
+				echo $login_button;	  
+	  			}else{
+								
+	  			}
+        		}
+				?>
+
+				<?php
+				if(isset($facebook_login_url)){
+				echo $facebook_login_url;
+				}else{
+				switch($page){
+					case 'home':
+					require_once('home.php');
+					break;
+					case 'login':
+					require_once('login.php');
+					break;
+					default:
+					require_once('home.php');
+					break;
+					}
+				}
+			?>
+			</div>
+	    <div class="footer"> By: Carl Aguilar & Lance Vaflor BSIT-2A</div>
     </body>
 </html>
