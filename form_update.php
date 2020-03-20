@@ -11,7 +11,7 @@
 ?>
 <html> 
     <head>
-      <title>  API Exercise 1 </title>
+      <title>  API Endterm </title>
       <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 <body>

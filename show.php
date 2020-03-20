@@ -19,7 +19,7 @@ $search = $_POST['search'];
 <html>
 <body>
     <div class="main_body"><br/>
-<h1> API Exercise 1 </h1>
+<h1> API Endterm </h1>
 
 	<form action="index.php?loadnav=list" method="POST">
 	Search:<input type="text" name="search" placeholder="Search Product Name">

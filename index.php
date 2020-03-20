@@ -23,6 +23,7 @@ if($login_button == true){
                         </div>
                     </div>
 	  	<div class="content">
+			<h1> Sign In</h1>
 			<?php
 			if($login_button == '')
 				{
